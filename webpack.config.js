@@ -1,0 +1,1 @@
+module.exports = { mode: 'production', entry: './src/index.js', output: { publicPath: 'assets/', path: __dirname + '/build/assets', filename: 'bundle.js' }, devtool: '#sourcemap', module: { rules: [ { test: /\.js$/, exclude: /(node_modules)/, loaders: [ 'babel-loader' ] }, { test: /\.css$/, loader: 'style-loader!css-loader' }, { test: /\.wav$/, loader: 'file-loader' } ] } }

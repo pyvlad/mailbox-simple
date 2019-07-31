@@ -1,0 +1,2 @@
+const webpack = require('webpack') 
+module.exports = { mode: 'development', entry: [ 'webpack-dev-server/client/?http://localhost:8080', './src/index.js' ], output: { publicPath: 'assets/', path: __dirname + '/build/assets', filename: 'bundle.js' }, devtool: '#sourcemap', devServer: { contentBase: './public', hot: true }, plugins: [new webpack.HotModuleReplacementPlugin()], module: { rules: [ { test: /\.js$/, exclude: /(node_modules)/, loaders: [ 'babel-loader' ] }, { test: /\.css$/, loader: 'style-loader!css-loader' }, { test: /\.wav$/, loader: 'file-loader' } ] } }
