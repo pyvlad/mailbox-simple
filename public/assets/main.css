@@ -1,0 +1,243 @@
+/* ###################################
+      1. Page Reset and Setup
+################################### */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section, article, aside, footer, header, nav {
+  display: block;
+}
+
+body {
+  background-color: #DDD;
+}
+
+.page {
+  color: #414141;
+  background-color: #EEE;
+  font-size: 16px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* ###################################
+      2. Header and Footer
+################################### */
+.page > header, .page > footer {
+  color: #fff;
+  width: 100%;
+}
+.page > header {
+  background-color: #5995DA;
+}
+.page > footer {
+  background-color: #111;
+}
+
+.page-header, .page-footer {
+  width: 90%;
+  margin: 5px auto;
+}
+
+.page-header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-nav {
+  display: flex;
+  align-items: center;
+}
+.page-nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.page-nav li {
+  margin-left: 20px;
+}
+
+.page-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: block;
+}
+.page-nav a:hover {
+  color: black;
+  font-weight: bold;
+}
+
+
+/* ###################################
+      3. Page Content
+################################### */
+.page-content {
+  flex: 1; 
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .page-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .left-pane {
+    width: 30%;
+    border: 2px solid #ddd;
+  }
+  .right-pane {
+    width: 70%;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 1067px) {
+  .page-content, .page-header, .page-footer {
+    width: 960px;
+  }
+}
+
+.advert, .mail-nav, .mail-list, .content {
+  margin: 5px;
+}
+
+/* 3.a. Mail Folders
+################################### */
+.mail-nav {
+  background-color: #ddd;
+  padding: 10px;
+}
+.mail-nav > header {
+  color: white;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 5px;
+  text-align: right;
+}
+.mail-nav ul {
+  list-style-type: none;
+}
+.mail-nav li {
+  padding: 10px;
+  border-bottom: 2px solid #FFF;
+} 
+.mail-nav li:first-child {
+  border-top: 2px solid #FFF;
+} 
+
+.mail-nav a {
+  color: #5995DA;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+}
+.mail-nav a:hover {
+  color: black;
+  font-weight: bold;
+}
+
+
+/* 3.b. Advertisement
+################################### */
+.advert {
+  color: green;
+  background-color: yellow;
+  border: 1px solid pink;
+  text-align: center;
+  height: 100px;
+}
+
+.advert h1 {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+/* 3.c. Main Content
+################################### */
+/* Single Email */
+.email-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.email-actions {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+button.email-action {
+  color: #222;
+  background-color: #FFF;
+  padding: 3px;
+  text-align: center;
+  border: 2px solid #DDD;
+  border-radius: 5px;
+}
+
+.email-meta { 
+  font-family: arial;
+  margin-top: 10px;
+  background-color: #eee;
+  border-top: 1px solid #ddd;
+}
+.email-meta > p {
+  padding: 5px 2px;
+  border-bottom: 1px solid #ddd;
+}
+
+.email-body {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid white;
+}
+
+.email-body p {
+  margin-top: 0.5rem;
+}
+
+/* Mail List */
+.mail-list {
+  padding: 10px;
+}
+.mail-list h1 {
+  color: #5995DA;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: center;
+}
+.mail-list p {
+  color: #5995DA;
+  font-size: 0.8em;
+  margin: 10px;
+}
+.mail-list ul {
+  list-style-type: none;
+  background-color: #eee;
+  margin: 10px; 
+}
+.mail-list li {
+  padding: 10px;
+  border-bottom: 2px solid #ddd;
+} 
+.mail-list li:first-child {
+  border-top: 2px solid #ddd;
+}
