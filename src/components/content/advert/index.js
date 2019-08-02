@@ -1,8 +1,8 @@
 import React from 'react'
-import './advert.css'
+import styles from './advert.css'
 
 export default () => (
-  <aside className='advert'>
+  <aside className={styles["advert"]}>
     <h1>Fake Ad</h1>
   </aside>
 )

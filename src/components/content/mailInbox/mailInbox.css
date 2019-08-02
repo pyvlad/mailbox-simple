@@ -11,11 +11,12 @@
   color: #5995DA;
   font-size: 0.8em;
   margin: 10px;
+  text-align: center;
 }
 .mail-list ul {
   list-style-type: none;
   background-color: #eee;
-  margin: 10px; 
+  margin: 10px 0; 
 }
 .mail-list li {
   padding: 10px;

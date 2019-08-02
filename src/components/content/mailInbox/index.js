@@ -1,8 +1,8 @@
 import React from 'react'
-import './mailInbox.css'
+import styles from './mailInbox.css'
 
 export default () => (
-  <div className="mail-list">
+  <div className={styles["mail-list"]}>
     <header>
       <h1>Inbox</h1>
       <p>Your incoming email messages are shown here.</p>

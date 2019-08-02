@@ -1,0 +1,16 @@
+/* ###################################
+Global Styles for CSS tags
+################################### */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section, article, aside, footer, header, nav {
+  display: block;
+}
+
+body {
+  background-color: #DDD;
+}
