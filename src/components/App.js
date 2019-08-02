@@ -1,12 +1,12 @@
 import React from 'react'
-import Header from './header'
-import Footer from './footer'
-import MailNav from './content/mailNav'
-import Advert from './content/advert'
-import MailMessage from './content/mailMessage'
-import MailInbox from './content/mailInbox'
+import Header from './Header'
+import Footer from './Footer'
+import MailNav from './content/MailNav'
+import Advert from './content/Advert'
+import MailMessage from './content/MailMessage'
+import MailInbox from './content/MailInbox'
 
-import styles from './app.css'
+import styles from './App.css'
 
 const App = () => {
   return (

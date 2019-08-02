@@ -1,3 +1,7 @@
+.container {
+  padding: 10px;
+}
+
 .email-header {
   display: flex;
   justify-content: space-between;

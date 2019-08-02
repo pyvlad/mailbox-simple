@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './mailMessage.css'
 
 export default () => (
-  <article>
+  <article className={styles["container"]}>
     <header className={styles['email-header']}>
       <h1>Email</h1>
       <ul className={styles["email-actions"]}>
