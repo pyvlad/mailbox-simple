@@ -1,17 +1,12 @@
 import React from 'react'
 import Header from './layout/header'
 import Footer from './layout/footer'
-import Inbox from './layout/inbox'
-import Message from './layout/message'
+import Content from './layout/content'
 
 const App = () => (
   <div className='page'>
     <Header></Header>
-    {
-      window.location.hash === "#message"
-      ?<Message></Message>
-      :<Inbox></Inbox>
-    }
+    <Content></Content>
     <Footer></Footer>
   </div>
 )
