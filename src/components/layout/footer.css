@@ -1,0 +1,10 @@
+/* TODO: dependency on outside component class!!! */
+.page > footer {
+  color: #fff;
+  width: 100%;
+  background-color: #111;
+}
+.page-footer {
+  width: 90%;
+  margin: 5px auto;
+}

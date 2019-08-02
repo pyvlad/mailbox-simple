@@ -1,0 +1,32 @@
+.mail-nav {
+  background-color: #ddd;
+  padding: 10px;
+}
+.mail-nav > header {
+  color: white;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 5px;
+  text-align: right;
+}
+.mail-nav ul {
+  list-style-type: none;
+}
+.mail-nav li {
+  padding: 10px;
+  border-bottom: 2px solid #FFF;
+} 
+.mail-nav li:first-child {
+  border-top: 2px solid #FFF;
+} 
+
+.mail-nav a {
+  color: #5995DA;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+}
+.mail-nav a:hover {
+  color: black;
+  font-weight: bold;
+}

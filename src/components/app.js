@@ -3,6 +3,8 @@ import Header from './layout/header'
 import Footer from './layout/footer'
 import Content from './layout/content'
 
+import './app.css'
+
 const App = () => (
   <div className='page'>
     <Header></Header>

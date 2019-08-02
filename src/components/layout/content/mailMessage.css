@@ -1,0 +1,40 @@
+.email-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.email-actions {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+button.email-action {
+  color: #222;
+  background-color: #FFF;
+  padding: 3px;
+  text-align: center;
+  border: 2px solid #DDD;
+  border-radius: 5px;
+}
+
+.email-meta { 
+  font-family: arial;
+  margin-top: 10px;
+  background-color: #eee;
+  border-top: 1px solid #ddd;
+}
+.email-meta > p {
+  padding: 5px 2px;
+  border-bottom: 1px solid #ddd;
+}
+
+.email-body {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid white;
+}
+
+.email-body p {
+  margin-top: 0.5rem;
+}

@@ -3,6 +3,7 @@ import MailNav from './mailNav'
 import Advert from './advert'
 import MailMessage from './mailMessage'
 import MailInbox from './mailInbox'
+import './index.css'
 
 export default () => (
   <div className="page-content">

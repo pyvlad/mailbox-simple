@@ -1,0 +1,26 @@
+.mail-list {
+  padding: 10px;
+}
+.mail-list h1 {
+  color: #5995DA;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: center;
+}
+.mail-list p {
+  color: #5995DA;
+  font-size: 0.8em;
+  margin: 10px;
+}
+.mail-list ul {
+  list-style-type: none;
+  background-color: #eee;
+  margin: 10px; 
+}
+.mail-list li {
+  padding: 10px;
+  border-bottom: 2px solid #ddd;
+} 
+.mail-list li:first-child {
+  border-top: 2px solid #ddd;
+}

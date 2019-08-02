@@ -1,4 +1,5 @@
 import React from 'react'
+import './mailNav.css'
 
 export default () => (
   <nav className="mail-nav">

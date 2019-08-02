@@ -1,4 +1,5 @@
 import React from 'react'
+import './mailMessage.css'
 
 export default () => (
   <article className='content'>

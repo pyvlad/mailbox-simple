@@ -1,4 +1,5 @@
 import React from 'react'
+import './mailInbox.css'
 
 export default () => (
   <div className="mail-list">
