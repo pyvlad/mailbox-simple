@@ -9,6 +9,12 @@
   min-height: 100vh;
 }
 
+.content {
+  width: 100%;
+  margin: 0 auto;
+  flex: 1;
+}
+
 .header {
   width: 100%;
   background-color: #5995DA;
@@ -25,26 +31,25 @@
   padding: 10px;
 }
 
-.content {
-  flex: 1; 
-  margin: 0 auto;
-  width: 100%;
-}
-
 @media screen and (min-width: 600px) {
-  .content {
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  .content, 
+  .header-content,
+  .footer-content {
     width: 90%;
   }
 
   .header-content,
   .footer-content {
-    width: 90%;
     margin: 0 auto;
+  }
+
+  .content {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
   }
 
   .left-pane {
@@ -57,7 +62,9 @@
 }
 
 @media screen and (min-width: 1067px) {
-  .content, .header-content, .footer-content {
+  .content, 
+  .header-content, 
+  .footer-content {
     width: 960px;
   }
 }
