@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './advert.css'
+import styles from './styles.css'
 
 export default () => (
   <aside className={styles["advert"]}>

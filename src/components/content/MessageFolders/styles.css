@@ -12,21 +12,22 @@
 .mail-nav ul {
   list-style-type: none;
 }
-.mail-nav li {
+.mail-nav-item {
   padding: 10px;
   border-bottom: 2px solid #FFF;
 } 
-.mail-nav li:first-child {
+.mail-nav-item:first-child {
   border-top: 2px solid #FFF;
 } 
-
-.mail-nav a {
+.mail-nav-item:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+.mail-nav-button {
   color: #5995DA;
   font-weight: bold;
   text-decoration: none;
   display: block;
-}
-.mail-nav a:hover {
-  color: black;
-  font-weight: bold;
+  width: 100%;
+  height: 100%;
 }
