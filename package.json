@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://pyvlad.github.io/mailbox-simple/",
   "scripts": {
-    "build": "rm -rf ./build && cp -r public ./build && ./node_modules/.bin/webpack -w",
-    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.dev.config.js"
+    "build": "rm -rf ./build && cp -r public ./build && ./node_modules/.bin/webpack",
+    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.dev.config.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +19,7 @@
     "babel-loader": "^8.0.6",
     "css-loader": "^3.1.0",
     "file-loader": "^4.1.0",
+    "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-hot-loader": "^4.12.10",
