@@ -7,6 +7,8 @@ import Advert from './content/Advert'
 import MessageFolders from './content/MessageFolders'
 import MessageSingle from './content/MessageSingle'
 import MessageList from './content/MessageList'
+import MessageCreateForm from './content/MessageCreateForm'
+import MessageCreateButton from './content/MessageCreateButton'
 
 import mockData from './data'
 
@@ -18,16 +20,18 @@ class App extends React.Component {
     this.categories = mockData.categories // categories aren't supposed to change
     this.messages = mockData.messages     // imitate DB store
     this.state = {
-      viewType: "category",
-      currentCategory: {
-        id: "all",
-        name: "All Messages"
-      },
+        viewType: "category",
+        currentCategory: {
+          id: "all",
+          name: "All Messages"
+        },
       currentMessage: {}
     }
     this.getMessagesByCategory = this.getMessagesByCategory.bind(this)
     this.handleCategorySelect = this.handleCategorySelect.bind(this)
     this.handleMessageSelect = this.handleMessageSelect.bind(this)
+    this.handleMessageCreate = this.handleMessageCreate.bind(this)
+    this.handleMessageSend = this.handleMessageSend.bind(this)
   }
 
   // This method should extract messages from DB
@@ -48,9 +52,48 @@ class App extends React.Component {
 
   handleMessageSelect(messageId) {
     this.setState({
-      viewType: "message",
+      viewType: "messageView",
       currentCategory: {},
       currentMessage: this.messages.filter((msg) => (msg.id === messageId))[0]
+    })
+  }
+
+  handleMessageCreate() {
+    this.setState({
+      viewType: "messageCreate",
+      currentCategory: {},
+      currentMessage: {}
+    })
+  }
+
+  // this is here mostly to imitate backend 
+  handleMessageSend(msgData) {
+    const msgObj = {
+      id: Math.max(...this.messages.map((item)=>item.id)) + 1,
+      from: {
+        name: "React Programmer",
+        address: "react.programmer@example.com"
+      },
+      to: {
+        name: "Unknown",
+        address: msgData.recepient
+      },
+      categoryId: "sent",
+      date: (new Date()).toISOString(),
+      title: msgData.title,
+      body: msgData.body
+    }
+
+    // imitate writing to DB
+    this.messages.push(msgObj)
+
+    this.setState({
+      viewType: "category",
+      currentCategory: {
+        id: "all",
+        name: "All Messages"
+      },
+      currentMessage: {}
     })
   }
 
@@ -69,23 +112,41 @@ class App extends React.Component {
         />
       )
     } 
-    else if (this.state.viewType === "message") {
+    else if (this.state.viewType === "messageView") {
       content = (
         <MessageSingle {...this.state.currentMessage } />
       )
     }
+    else if (this.state.viewType === "messageCreate") {
+      content = (
+        <MessageCreateForm 
+          onMessageSend={this.handleMessageSend} 
+        />
+      )
+    }
 
+    // TODO: better separate component styling from layout styling!
+    // remove inline style below 
     return (
       <Layout
         header={ <Header /> }
         footer={ <Footer /> }
         leftPane={
           <Fragment>
-            <MessageFolders 
-              categories={this.categories} 
-              onCategorySelect={this.handleCategorySelect}
-            />
-            <Advert />
+            <div style={{width: "100%", margin: "10px 0", textAlign: "center"}}>
+              <MessageCreateButton 
+                handleClick={this.handleMessageCreate}
+              />
+            </div>
+            <div style={{width: "100%", margin: "10px 0"}}>
+              <MessageFolders 
+                categories={this.categories} 
+                onCategorySelect={this.handleCategorySelect}
+              />
+            </div>
+            <div>
+              <Advert />
+            </div>
           </Fragment> 
         }
         rightPane={content}

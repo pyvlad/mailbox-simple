@@ -36,9 +36,7 @@ button.email-action {
 .email-body {
   margin-top: 0.5rem;
   padding: 0.5rem;
-  border: 1px solid #ddd;
   min-height: 200px;
-  background-color: white;
 }
 
 .email-body p {
